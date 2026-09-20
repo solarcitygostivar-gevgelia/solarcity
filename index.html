@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="htmlRoot">
 <head>
   <meta name="google-site-verification" content="Qa0GvWYZOXWm7wHYt4CDBhk-vClXemmSlrmdY7VlPzc" />
   <meta charset="UTF-8">
@@ -50,13 +50,27 @@
       </a>
 
       <nav class="navbar-links" id="navbarLinks">
-        <a href="#home" class="nav-link active-link">Home</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#projects" class="nav-link">Projects</a>
-        <a href="#contact" class="nav-link">Contact Us</a>
-        <a href="#contact" class="btn btn-primary btn-nav">Get a Quote</a>
+        <a href="#home" class="nav-link active-link" data-i18n="nav.home">Home</a>
+        <a href="#about" class="nav-link" data-i18n="nav.about">About Us</a>
+        <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
+        <a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact Us</a>
+        <a href="#contact" class="btn btn-primary btn-nav" data-i18n="nav.quote">Get a Quote</a>
+
+        <!-- Language switcher (mobile, inline in menu) -->
+        <div class="lang-switch lang-switch-mobile" id="langSwitchMobile">
+          <button type="button" class="lang-option active-lang" data-lang="en">EN</button>
+          <button type="button" class="lang-option" data-lang="sq">SQ</button>
+          <button type="button" class="lang-option" data-lang="mk">MK</button>
+        </div>
       </nav>
+
+      <!-- Language switcher (desktop, always visible) -->
+      <div class="lang-switch lang-switch-desktop" id="langSwitchDesktop">
+        <button type="button" class="lang-option active-lang" data-lang="en">EN</button>
+        <button type="button" class="lang-option" data-lang="sq">SQ</button>
+        <button type="button" class="lang-option" data-lang="mk">MK</button>
+      </div>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span class="hamburger-bar"></span>
@@ -76,34 +90,34 @@
       </div>
 
       <div class="container hero-content">
-        <p class="eyebrow reveal-up">Solar Energy Provider · Gostivar &amp; Gevgelija</p>
+        <p class="eyebrow reveal-up" data-i18n="hero.eyebrow">Solar Energy Provider · Gostivar &amp; Gevgelija</p>
         <h1 class="hero-title reveal-up">
-          Harness the Sun. <br>
-          Power Your <span class="text-gold">Future.</span>
+          <span data-i18n="hero.title1">Harness the Sun.</span> <br>
+          <span data-i18n="hero.title2">Power Your</span> <span class="text-gold" data-i18n="hero.title3">Future.</span>
         </h1>
-        <p class="hero-desc reveal-up">
+        <p class="hero-desc reveal-up" data-i18n="hero.desc">
           SolarCity designs, installs and maintains premium solar energy systems for homes and
           businesses across North Macedonia — helping you cut energy costs while switching to
           clean, renewable power.
         </p>
 
         <div class="hero-cta reveal-up">
-          <a href="#contact" class="btn btn-primary">Get a Free Quote</a>
-          <a href="#services" class="btn btn-outline">Our Services</a>
+          <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaPrimary">Get a Free Quote</a>
+          <a href="#services" class="btn btn-outline" data-i18n="hero.ctaSecondary">Our Services</a>
         </div>
 
         <div class="hero-indicators reveal-up">
           <div class="indicator-item">
             <span class="indicator-icon">☀</span>
-            <span>Clean Energy</span>
+            <span data-i18n="hero.indicator1">Clean Energy</span>
           </div>
           <div class="indicator-item">
             <span class="indicator-icon">⚡</span>
-            <span>Lower Energy Costs</span>
+            <span data-i18n="hero.indicator2">Lower Energy Costs</span>
           </div>
           <div class="indicator-item">
             <span class="indicator-icon">🛠</span>
-            <span>Professional Installation</span>
+            <span data-i18n="hero.indicator3">Professional Installation</span>
           </div>
         </div>
       </div>
@@ -117,25 +131,25 @@
     <section class="section about" id="about">
       <div class="container">
         <div class="section-header reveal-up">
-          <p class="eyebrow">About Us</p>
-          <h2 class="section-title">Trusted Solar Experts, Rooted in North Macedonia</h2>
+          <p class="eyebrow" data-i18n="about.eyebrow">About Us</p>
+          <h2 class="section-title" data-i18n="about.title">Trusted Solar Experts, Rooted in North Macedonia</h2>
         </div>
 
         <div class="about-grid">
           <div class="about-text reveal-up">
-            <p>
+            <p data-i18n="about.p1">
               SolarCity is a solar energy company dedicated to helping homeowners and businesses in
               <strong>Gostivar</strong> and <strong>Gevgelija</strong> transition to clean, dependable
               solar power. From the first consultation to the final switch-on, our team manages every
               step of the process with precision, transparency and care.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               Solar energy is one of the most reliable ways to reduce electricity costs while lowering
               your environmental footprint. As energy prices rise and demand for sustainable solutions
               grows, investing in solar is no longer optional — it's a smart, long-term decision for
               your home or business.
             </p>
-            <p>
+            <p data-i18n="about.p3">
               What sets SolarCity apart is our unwavering focus on <strong>quality equipment</strong>,
               <strong>reliable installation</strong> and <strong>genuine customer satisfaction</strong>.
               We don't just install solar panels — we build long-term energy partnerships with every
@@ -146,23 +160,23 @@
           <div class="about-stats reveal-up">
             <div class="stat-card">
               <div class="stat-icon">🏆</div>
-              <h3>Quality Installation</h3>
-              <p>Certified technicians and industry-grade components on every project.</p>
+              <h3 data-i18n="about.stat1Title">Quality Installation</h3>
+              <p data-i18n="about.stat1Desc">Certified technicians and industry-grade components on every project.</p>
             </div>
             <div class="stat-card">
               <div class="stat-icon">🌱</div>
-              <h3>Renewable Energy</h3>
-              <p>100% clean solar power designed to reduce your carbon footprint.</p>
+              <h3 data-i18n="about.stat2Title">Renewable Energy</h3>
+              <p data-i18n="about.stat2Desc">100% clean solar power designed to reduce your carbon footprint.</p>
             </div>
             <div class="stat-card">
               <div class="stat-icon">🤝</div>
-              <h3>Customer Focus</h3>
-              <p>Transparent pricing and honest guidance from quote to installation.</p>
+              <h3 data-i18n="about.stat3Title">Customer Focus</h3>
+              <p data-i18n="about.stat3Desc">Transparent pricing and honest guidance from quote to installation.</p>
             </div>
             <div class="stat-card">
               <div class="stat-icon">⚙</div>
-              <h3>Professional Service</h3>
-              <p>Full-service support — design, installation, and ongoing maintenance.</p>
+              <h3 data-i18n="about.stat4Title">Professional Service</h3>
+              <p data-i18n="about.stat4Desc">Full-service support — design, installation, and ongoing maintenance.</p>
             </div>
           </div>
         </div>
@@ -173,52 +187,52 @@
     <section class="section services" id="services">
       <div class="container">
         <div class="section-header reveal-up">
-          <p class="eyebrow">What We Offer</p>
-          <h2 class="section-title">Our Solar Services</h2>
-          <p class="section-subtitle">Complete solar solutions tailored for homes and businesses across Gostivar and Gevgelija.</p>
+          <p class="eyebrow" data-i18n="services.eyebrow">What We Offer</p>
+          <h2 class="section-title" data-i18n="services.title">Our Solar Services</h2>
+          <p class="section-subtitle" data-i18n="services.subtitle">Complete solar solutions tailored for homes and businesses across Gostivar and Gevgelija.</p>
         </div>
 
         <div class="services-grid">
           <div class="service-card reveal-up">
             <div class="service-icon">🏠</div>
-            <h3>Residential Solar Systems</h3>
-            <p>Custom-designed solar systems for houses and apartments, built to reduce your monthly electricity bill and increase your property's energy independence.</p>
-            <a href="#contact" class="card-link">Learn More →</a>
+            <h3 data-i18n="services.s1Title">Residential Solar Systems</h3>
+            <p data-i18n="services.s1Desc">Custom-designed solar systems for houses and apartments, built to reduce your monthly electricity bill and increase your property's energy independence.</p>
+            <a href="#contact" class="card-link" data-i18n="services.learnMore">Learn More →</a>
           </div>
 
           <div class="service-card reveal-up">
             <div class="service-icon">🏢</div>
-            <h3>Commercial Solar Systems</h3>
-            <p>Scalable solar solutions for businesses, offices and factories designed to lower operational costs and support long-term sustainability goals.</p>
-            <a href="#contact" class="card-link">Learn More →</a>
+            <h3 data-i18n="services.s2Title">Commercial Solar Systems</h3>
+            <p data-i18n="services.s2Desc">Scalable solar solutions for businesses, offices and factories designed to lower operational costs and support long-term sustainability goals.</p>
+            <a href="#contact" class="card-link" data-i18n="services.learnMore">Learn More →</a>
           </div>
 
           <div class="service-card reveal-up">
             <div class="service-icon">🔧</div>
-            <h3>Solar Panel Installation</h3>
-            <p>Professional, safe and efficient installation carried out by certified technicians using premium equipment and industry best practices.</p>
-            <a href="#contact" class="card-link">Learn More →</a>
+            <h3 data-i18n="services.s3Title">Solar Panel Installation</h3>
+            <p data-i18n="services.s3Desc">Professional, safe and efficient installation carried out by certified technicians using premium equipment and industry best practices.</p>
+            <a href="#contact" class="card-link" data-i18n="services.learnMore">Learn More →</a>
           </div>
 
           <div class="service-card reveal-up">
             <div class="service-icon">🧰</div>
-            <h3>System Maintenance</h3>
-            <p>Regular inspections, cleaning and performance checks to keep your solar system running at peak efficiency for years to come.</p>
-            <a href="#contact" class="card-link">Learn More →</a>
+            <h3 data-i18n="services.s4Title">System Maintenance</h3>
+            <p data-i18n="services.s4Desc">Regular inspections, cleaning and performance checks to keep your solar system running at peak efficiency for years to come.</p>
+            <a href="#contact" class="card-link" data-i18n="services.learnMore">Learn More →</a>
           </div>
 
           <div class="service-card reveal-up">
             <div class="service-icon">💬</div>
-            <h3>Solar Energy Consultation</h3>
-            <p>Expert guidance to help you understand your energy needs, potential savings and the right solar solution for your property.</p>
-            <a href="#contact" class="card-link">Learn More →</a>
+            <h3 data-i18n="services.s5Title">Solar Energy Consultation</h3>
+            <p data-i18n="services.s5Desc">Expert guidance to help you understand your energy needs, potential savings and the right solar solution for your property.</p>
+            <a href="#contact" class="card-link" data-i18n="services.learnMore">Learn More →</a>
           </div>
 
           <div class="service-card reveal-up">
             <div class="service-icon">📐</div>
-            <h3>System Design &amp; Planning</h3>
-            <p>Detailed technical planning and layout design to maximize energy output based on your roof, location and energy consumption.</p>
-            <a href="#contact" class="card-link">Learn More →</a>
+            <h3 data-i18n="services.s6Title">System Design &amp; Planning</h3>
+            <p data-i18n="services.s6Desc">Detailed technical planning and layout design to maximize energy output based on your roof, location and energy consumption.</p>
+            <a href="#contact" class="card-link" data-i18n="services.learnMore">Learn More →</a>
           </div>
         </div>
       </div>
@@ -228,61 +242,61 @@
     <section class="section projects" id="projects">
       <div class="container">
         <div class="section-header reveal-up">
-          <p class="eyebrow">Our Work</p>
-          <h2 class="section-title">Recent Projects</h2>
-          <p class="section-subtitle">A look at some of the residential and commercial solar systems we've delivered.</p>
+          <p class="eyebrow" data-i18n="projects.eyebrow">Our Work</p>
+          <h2 class="section-title" data-i18n="projects.title">Recent Projects</h2>
+          <p class="section-subtitle" data-i18n="projects.subtitle">A look at some of the residential and commercial solar systems we've delivered.</p>
         </div>
 
         <div class="projects-grid">
           <div class="project-card reveal-up">
             <div class="project-image">
               <img src="https://images.unsplash.com/photo-1518492104633-130d0cc84637?q=80&w=900&auto=format&fit=crop" alt="Residential solar panel installation on a house roof in Gostivar" loading="lazy">
-              <span class="project-tag">Residential</span>
+              <span class="project-tag" data-i18n="projects.tagResidential">Residential</span>
             </div>
             <div class="project-info">
-              <h3>Residential Solar Installation</h3>
-              <p class="project-location">📍 Gostivar, North Macedonia</p>
-              <p>A rooftop system designed to cover the majority of the household's daily energy consumption.</p>
-              <span class="project-capacity">Capacity: ~6.5 kW</span>
+              <h3 data-i18n="projects.p1Title">Residential Solar Installation</h3>
+              <p class="project-location">📍 <span data-i18n="projects.p1Loc">Gostivar, North Macedonia</span></p>
+              <p data-i18n="projects.p1Desc">A rooftop system designed to cover the majority of the household's daily energy consumption.</p>
+              <span class="project-capacity" data-i18n="projects.p1Cap">Capacity: ~6.5 kW</span>
             </div>
           </div>
 
           <div class="project-card reveal-up">
             <div class="project-image">
               <img src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=900&auto=format&fit=crop" alt="Commercial solar panel system installed on a business facility in Gevgelija" loading="lazy">
-              <span class="project-tag">Commercial</span>
+              <span class="project-tag" data-i18n="projects.tagCommercial">Commercial</span>
             </div>
             <div class="project-info">
-              <h3>Commercial Solar System</h3>
-              <p class="project-location">📍 Gevgelija, North Macedonia</p>
-              <p>A large-scale installation built to reduce operational energy costs for a local business.</p>
-              <span class="project-capacity">Capacity: ~35 kW</span>
+              <h3 data-i18n="projects.p2Title">Commercial Solar System</h3>
+              <p class="project-location">📍 <span data-i18n="projects.p2Loc">Gevgelija, North Macedonia</span></p>
+              <p data-i18n="projects.p2Desc">A large-scale installation built to reduce operational energy costs for a local business.</p>
+              <span class="project-capacity" data-i18n="projects.p2Cap">Capacity: ~35 kW</span>
             </div>
           </div>
 
           <div class="project-card reveal-up">
             <div class="project-image">
               <img src="https://images.unsplash.com/photo-1592833167665-ebf29d399221?q=80&w=900&auto=format&fit=crop" alt="Rooftop solar project with multiple panel rows in Gostivar" loading="lazy">
-              <span class="project-tag">Residential</span>
+              <span class="project-tag" data-i18n="projects.tagResidential">Residential</span>
             </div>
             <div class="project-info">
-              <h3>Rooftop Solar Project</h3>
-              <p class="project-location">📍 Gostivar, North Macedonia</p>
-              <p>A full rooftop array optimized for maximum sun exposure throughout the year.</p>
-              <span class="project-capacity">Capacity: ~9 kW</span>
+              <h3 data-i18n="projects.p3Title">Rooftop Solar Project</h3>
+              <p class="project-location">📍 <span data-i18n="projects.p3Loc">Gostivar, North Macedonia</span></p>
+              <p data-i18n="projects.p3Desc">A full rooftop array optimized for maximum sun exposure throughout the year.</p>
+              <span class="project-capacity" data-i18n="projects.p3Cap">Capacity: ~9 kW</span>
             </div>
           </div>
 
           <div class="project-card reveal-up">
             <div class="project-image">
               <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=900&auto=format&fit=crop" alt="Industrial solar installation covering a large facility roof in Gevgelija" loading="lazy">
-              <span class="project-tag">Industrial</span>
+              <span class="project-tag" data-i18n="projects.tagIndustrial">Industrial</span>
             </div>
             <div class="project-info">
-              <h3>Industrial Solar Installation</h3>
-              <p class="project-location">📍 Gevgelija, North Macedonia</p>
-              <p>A high-capacity solar array supporting the energy demands of an industrial facility.</p>
-              <span class="project-capacity">Capacity: ~80 kW</span>
+              <h3 data-i18n="projects.p4Title">Industrial Solar Installation</h3>
+              <p class="project-location">📍 <span data-i18n="projects.p4Loc">Gevgelija, North Macedonia</span></p>
+              <p data-i18n="projects.p4Desc">A high-capacity solar array supporting the energy demands of an industrial facility.</p>
+              <span class="project-capacity" data-i18n="projects.p4Cap">Capacity: ~80 kW</span>
             </div>
           </div>
         </div>
@@ -293,40 +307,40 @@
     <section class="section why-us" id="why-us">
       <div class="container">
         <div class="section-header reveal-up light-header">
-          <p class="eyebrow">Why SolarCity</p>
-          <h2 class="section-title">Why Customers Choose Us</h2>
+          <p class="eyebrow" data-i18n="why.eyebrow">Why SolarCity</p>
+          <h2 class="section-title" data-i18n="why.title">Why Customers Choose Us</h2>
         </div>
 
         <div class="why-grid">
           <div class="why-card reveal-up">
             <div class="why-icon">🛠</div>
-            <h3>Professional Installation</h3>
-            <p>Certified installers who follow strict safety and quality standards on every job.</p>
+            <h3 data-i18n="why.w1Title">Professional Installation</h3>
+            <p data-i18n="why.w1Desc">Certified installers who follow strict safety and quality standards on every job.</p>
           </div>
           <div class="why-card reveal-up">
             <div class="why-icon">⭐</div>
-            <h3>High-Quality Equipment</h3>
-            <p>We use durable, high-performance panels and components built to last for decades.</p>
+            <h3 data-i18n="why.w2Title">High-Quality Equipment</h3>
+            <p data-i18n="why.w2Desc">We use durable, high-performance panels and components built to last for decades.</p>
           </div>
           <div class="why-card reveal-up">
             <div class="why-icon">🔒</div>
-            <h3>Reliable Service</h3>
-            <p>Dependable timelines and clear communication from your first call to final handover.</p>
+            <h3 data-i18n="why.w3Title">Reliable Service</h3>
+            <p data-i18n="why.w3Desc">Dependable timelines and clear communication from your first call to final handover.</p>
           </div>
           <div class="why-card reveal-up">
             <div class="why-icon">💰</div>
-            <h3>Energy Savings</h3>
-            <p>Systems engineered to maximize your return on investment and lower monthly bills.</p>
+            <h3 data-i18n="why.w4Title">Energy Savings</h3>
+            <p data-i18n="why.w4Desc">Systems engineered to maximize your return on investment and lower monthly bills.</p>
           </div>
           <div class="why-card reveal-up">
             <div class="why-icon">📞</div>
-            <h3>Customer Support</h3>
-            <p>Ongoing support and maintenance guidance long after installation is complete.</p>
+            <h3 data-i18n="why.w5Title">Customer Support</h3>
+            <p data-i18n="why.w5Desc">Ongoing support and maintenance guidance long after installation is complete.</p>
           </div>
           <div class="why-card reveal-up">
             <div class="why-icon">🌍</div>
-            <h3>Sustainable Energy</h3>
-            <p>Helping North Macedonia move toward a cleaner, more sustainable energy future.</p>
+            <h3 data-i18n="why.w6Title">Sustainable Energy</h3>
+            <p data-i18n="why.w6Desc">Helping North Macedonia move toward a cleaner, more sustainable energy future.</p>
           </div>
         </div>
       </div>
@@ -336,31 +350,31 @@
     <section class="section how-it-works" id="how-it-works">
       <div class="container">
         <div class="section-header reveal-up">
-          <p class="eyebrow">Our Process</p>
-          <h2 class="section-title">How It Works</h2>
-          <p class="section-subtitle">A simple, transparent process from your first inquiry to a fully working solar system.</p>
+          <p class="eyebrow" data-i18n="how.eyebrow">Our Process</p>
+          <h2 class="section-title" data-i18n="how.title">How It Works</h2>
+          <p class="section-subtitle" data-i18n="how.subtitle">A simple, transparent process from your first inquiry to a fully working solar system.</p>
         </div>
 
         <div class="steps-track">
           <div class="step-card reveal-up">
             <div class="step-number">01</div>
-            <h3>Contact Us</h3>
-            <p>Reach out through our contact form or phone to tell us about your energy needs.</p>
+            <h3 data-i18n="how.step1Title">Contact Us</h3>
+            <p data-i18n="how.step1Desc">Reach out through our contact form or phone to tell us about your energy needs.</p>
           </div>
           <div class="step-card reveal-up">
             <div class="step-number">02</div>
-            <h3>Site Assessment</h3>
-            <p>Our team evaluates your property to determine the best solar setup for your space.</p>
+            <h3 data-i18n="how.step2Title">Site Assessment</h3>
+            <p data-i18n="how.step2Desc">Our team evaluates your property to determine the best solar setup for your space.</p>
           </div>
           <div class="step-card reveal-up">
             <div class="step-number">03</div>
-            <h3>System Design</h3>
-            <p>We create a custom system design optimized for maximum energy production.</p>
+            <h3 data-i18n="how.step3Title">System Design</h3>
+            <p data-i18n="how.step3Desc">We create a custom system design optimized for maximum energy production.</p>
           </div>
           <div class="step-card reveal-up">
             <div class="step-number">04</div>
-            <h3>Installation</h3>
-            <p>Our certified technicians install your system safely, efficiently and on schedule.</p>
+            <h3 data-i18n="how.step4Title">Installation</h3>
+            <p data-i18n="how.step4Desc">Our certified technicians install your system safely, efficiently and on schedule.</p>
           </div>
         </div>
       </div>
@@ -370,9 +384,9 @@
     <section class="section contact" id="contact">
       <div class="container">
         <div class="section-header reveal-up">
-          <p class="eyebrow">Get In Touch</p>
-          <h2 class="section-title">Contact Us</h2>
-          <p class="section-subtitle">Ready to switch to solar? Send us a message and our team will get back to you shortly.</p>
+          <p class="eyebrow" data-i18n="contact.eyebrow">Get In Touch</p>
+          <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
+          <p class="section-subtitle" data-i18n="contact.subtitle">Ready to switch to solar? Send us a message and our team will get back to you shortly.</p>
         </div>
 
         <div class="contact-grid">
@@ -381,21 +395,21 @@
             <div class="contact-item">
               <span class="contact-icon">📍</span>
               <div>
-                <strong>Locations</strong>
-                <p>Gostivar &amp; Gevgelija, North Macedonia</p>
+                <strong data-i18n="contact.locationsLabel">Locations</strong>
+                <p data-i18n="contact.locationsValue">Gostivar &amp; Gevgelija, North Macedonia</p>
               </div>
             </div>
             <div class="contact-item">
               <span class="contact-icon">📞</span>
               <div>
-                <strong>Phone</strong>
+                <strong data-i18n="contact.phoneLabel">Phone</strong>
                 <p>075 296 337</p>
               </div>
             </div>
             <div class="contact-item">
               <span class="contact-icon">✉</span>
               <div>
-                <strong>Email</strong>
+                <strong data-i18n="contact.emailLabel">Email</strong>
                 <p>rufatabazi39@gmail.com</p>
               </div>
             </div>
@@ -404,12 +418,12 @@
           <form class="contact-form reveal-up" id="contactForm" novalidate>
             <div class="form-row">
               <div class="form-group">
-                <label for="fullName">Full Name <span class="required">*</span></label>
+                <label for="fullName" data-i18n="form.fullName">Full Name <span class="required">*</span></label>
                 <input type="text" id="fullName" name="fullName" placeholder="John Doe">
                 <span class="error-message" id="fullNameError"></span>
               </div>
               <div class="form-group">
-                <label for="email">Email <span class="required">*</span></label>
+                <label for="email" data-i18n="form.email">Email <span class="required">*</span></label>
                 <input type="text" id="email" name="email" placeholder="john@example.com">
                 <span class="error-message" id="emailError"></span>
               </div>
@@ -417,26 +431,26 @@
 
             <div class="form-row">
               <div class="form-group">
-                <label for="phone">Phone Number</label>
+                <label for="phone" data-i18n="form.phone">Phone Number</label>
                 <input type="text" id="phone" name="phone" placeholder="075 296 337">
                 <span class="error-message" id="phoneError"></span>
               </div>
               <div class="form-group">
-                <label for="subject">Subject <span class="required">*</span></label>
-                <input type="text" id="subject" name="subject" placeholder="Residential Solar Quote">
+                <label for="subject" data-i18n="form.subject">Subject <span class="required">*</span></label>
+                <input type="text" id="subject" name="subject" data-i18n-placeholder="form.subjectPh" placeholder="Residential Solar Quote">
                 <span class="error-message" id="subjectError"></span>
               </div>
             </div>
 
             <div class="form-group">
-              <label for="message">Message <span class="required">*</span></label>
-              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..."></textarea>
+              <label for="message" data-i18n="form.message">Message <span class="required">*</span></label>
+              <textarea id="message" name="message" rows="5" data-i18n-placeholder="form.messagePh" placeholder="Tell us about your project..."></textarea>
               <span class="error-message" id="messageError"></span>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+            <button type="submit" class="btn btn-primary btn-submit" data-i18n="form.submit">Send Message</button>
 
-            <div class="form-success" id="formSuccess" role="status">
+            <div class="form-success" id="formSuccess" role="status" data-i18n="form.success">
               ✅ Thank you! Your message has been received. Our team will contact you shortly.
             </div>
           </form>
@@ -467,40 +481,40 @@
           </span>
           <span class="logo-text">Solar<span class="logo-accent">City</span></span>
         </a>
-        <p>Professional solar energy systems for homes and businesses in Gostivar and Gevgelija, North Macedonia.</p>
+        <p data-i18n="footer.desc">Professional solar energy systems for homes and businesses in Gostivar and Gevgelija, North Macedonia.</p>
         <div class="social-links">
           <a href="https://www.instagram.com/solarcitymk" target="_blank" rel="noopener noreferrer" aria-label="SolarCity on Instagram" class="social-icon">ig</a>
         </div>
       </div>
 
       <div class="footer-col">
-        <h4>Quick Links</h4>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact Us</a>
+        <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+        <a href="#home" data-i18n="nav.home">Home</a>
+        <a href="#about" data-i18n="nav.about">About Us</a>
+        <a href="#services" data-i18n="nav.services">Services</a>
+        <a href="#projects" data-i18n="nav.projects">Projects</a>
+        <a href="#contact" data-i18n="nav.contact">Contact Us</a>
       </div>
 
       <div class="footer-col">
-        <h4>Services</h4>
-        <a href="#services">Residential Solar</a>
-        <a href="#services">Commercial Solar</a>
-        <a href="#services">Installation</a>
-        <a href="#services">Maintenance</a>
-        <a href="#services">Consultation</a>
+        <h4 data-i18n="footer.services">Services</h4>
+        <a href="#services" data-i18n="footer.svc1">Residential Solar</a>
+        <a href="#services" data-i18n="footer.svc2">Commercial Solar</a>
+        <a href="#services" data-i18n="footer.svc3">Installation</a>
+        <a href="#services" data-i18n="footer.svc4">Maintenance</a>
+        <a href="#services" data-i18n="footer.svc5">Consultation</a>
       </div>
 
       <div class="footer-col">
-        <h4>Contact</h4>
-        <p>Gostivar &amp; Gevgelija<br>North Macedonia</p>
+        <h4 data-i18n="footer.contact">Contact</h4>
+        <p data-i18n="footer.location">Gostivar &amp; Gevgelija<br>North Macedonia</p>
         <p>075 296 337</p>
         <p>rufatabazi39@gmail.com</p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 SolarCity. All Rights Reserved.</p>
+      <p data-i18n="footer.copyright">&copy; 2026 SolarCity. All Rights Reserved.</p>
     </div>
   </footer>
 
